@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 /** For html */
 public extension String {
