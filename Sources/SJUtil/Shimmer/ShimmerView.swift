@@ -64,7 +64,7 @@ public class ShimmerView:UIView {
 }
 
 extension ShimmerView: CAAnimationDelegate {
-    func animationDidStop(_ anim: CAAnimation, finished: Bool) {
+    public func animationDidStop(_ anim: CAAnimation, finished: Bool) {
         animating = false
         if finished {
             gradientLayer?.removeFromSuperlayer()
