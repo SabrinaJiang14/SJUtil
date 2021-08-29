@@ -115,6 +115,8 @@ extension IndicatorView {
             return BallClipRotatePulse()
         case .BallClipRotate:
             return BallClipRotate()
+        case .LineScale:
+            return lineScale()
         }
     }
 }

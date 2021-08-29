@@ -25,7 +25,7 @@ public enum AnimationType {
 //    case BallZigZagDeflect
 //    case BallTrianglePath
 //    case BallScale
-//    case LineScale
+    case LineScale
 //    case LineScaleParty
 //    case BallScaleMultiple
 //    case BallPulseSync
