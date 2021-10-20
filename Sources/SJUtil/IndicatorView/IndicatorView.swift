@@ -53,7 +53,7 @@ public class IndicatorView : UIView {
         return CGSize(width: size ?? 0, height: size ?? 0)
     }
     
-    func startAnimating() {
+    public func startAnimating() {
         if let sublayers = animationLayer?.sublayers, sublayers.count != 0 {
             self.setupAnimation()
         }
@@ -62,7 +62,7 @@ public class IndicatorView : UIView {
         self.animating = true
     }
     
-    func stopAnimating() {
+    public func stopAnimating() {
         self.animationLayer?.speed = 0.0
         self.animating = false
         self.isHidden = true
