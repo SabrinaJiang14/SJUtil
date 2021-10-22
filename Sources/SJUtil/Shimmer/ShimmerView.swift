@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-public class ShimmerView:UIView {
+open class ShimmerView:UIView {
     
     private var gradientColorOne : CGColor = UIColor(white: 0.85, alpha: 1.0).cgColor
     private var gradientColorTwo : CGColor = UIColor(white: 0.95, alpha: 1.0).cgColor
@@ -20,7 +20,7 @@ public class ShimmerView:UIView {
         super.init(frame: frame)
     }
     
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         super.init(coder: coder)
     }
     
