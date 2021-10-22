@@ -16,7 +16,7 @@ open class ShimmerView:UIView {
     private var gradientLayer:CAGradientLayer!
     private var animating = false
     
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: frame)
     }
     
