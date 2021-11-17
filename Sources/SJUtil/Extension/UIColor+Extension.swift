@@ -14,6 +14,22 @@ public extension UIColor {
         self.init(red: r / 255.0, green: g / 255.0, blue: b / 255.0, alpha: 1.0)
     }
     
+    convenience init(hexStr:String) {
+        var hexInt: UInt64 = 0
+        // Create scanner
+        let scanner: Scanner = Scanner(string: hexStr)
+        // Tell scanner to skip the # character
+        scanner.charactersToBeSkipped = CharacterSet(charactersIn: "#")
+        // Scan hex value
+        scanner.scanHexInt64(&hexInt)
+        
+        let red = CGFloat((hexInt & 0xff0000) >> 16) / 255.0
+        let green = CGFloat((hexInt & 0xff00) >> 8) / 255.0
+        let blue = CGFloat((hexInt & 0xff) >> 0) / 255.0
+        
+        self.init(red: red, green: green, blue: blue, alpha: 1.0)
+    }
+    
     var random:UIColor {
         let shuffledDistribution = GKShuffledDistribution(lowestValue: 10, highestValue: 137)
         let num:CGFloat = CGFloat(Double(shuffledDistribution.nextInt()) / 255.0)
@@ -54,4 +70,5 @@ public extension UIColor {
         scanner.scanHexInt64(&hexInt)
         return hexInt
     }
+    
 }
