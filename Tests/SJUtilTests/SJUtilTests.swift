@@ -1,10 +1,11 @@
-    import XCTest
-    @testable import SJUtil
+import XCTest
+@testable import SJUtil
 
-    final class SJUtilTests: XCTestCase {
-        func testExample() {
-            // This is an example of a functional test case.
-            // Use XCTAssert and related functions to verify your tests produce the correct
-            // results.
-        }
+final class SJUtilTests: XCTestCase {
+    func testExample() throws {
+        // This is an example of a functional test case.
+        // Use XCTAssert and related functions to verify your tests produce the correct
+        // results.
+        XCTAssertEqual(SJUtil().text, "Hello, World!")
     }
+}
