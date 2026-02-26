@@ -24,6 +24,7 @@ public enum ParametersEncoding {
     case UrlEnconing
     case BodyEncoding
     case BodyRawEncoding
+    case JsonEncoding
 }
 
 public enum MimeType:String {
